@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+	$('a[href^="#"]').on('click',function () {
 
 	    var target = this.hash,
 	    $target = $(target);
@@ -10,5 +9,7 @@ $(document).ready(function(){
 	    }, 900, 'swing', function () {
 	        window.location.hash = target;
 	    });
+	    
+	    return false;
 	});
 });
